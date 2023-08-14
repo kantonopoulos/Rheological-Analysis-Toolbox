@@ -5,7 +5,6 @@
 2. [What can I do with the Rheological Analysis Toolbox?](#what-can-i-do-with-the-rheological-analysis-toolbox?)
 3. [License](#license)
 4. [Installation](#installation)
-5. [Contributing](#contributing)
 
 ## Introduction
 The Rheological Analysis Toolbox is a comprehensive set of tools designed for performing rheological analysis and data processing of synovial fluid samples. Its main purpose is to aid in the diagnosis of Osteoarthritis (OA) by analyzing the rheological properties of synovial fluid samples. This toolbox has been developed as part of a research project aimed at creating a medical device for OA diagnosis based on rheological data.
@@ -74,23 +73,3 @@ Alternatively, you can download the repository as a ZIP file from the GitHub pag
 3. Open the relevant notebook files (*.ipynb) in Jupyter (or Python Files if using other IDE) and execute the code cells to run the Rheological Analysis Toolbox.
 
 Now you are ready to perform rheological and data analysis of synovial fluid samples and further develop the OA diagnostic medical device. For more detailed documentation and instructions, please refer to the complete documentation provided.
-
-## Contributing
-Researchers from the Biomedical Lab of the Chemical Engineering Department at Aristotle University of Thessaloniki are encouraged to actively contribute to the development and enhancement of the Rheological Analysis Toolbox. Contributions may include bug fixes, new features, code optimizations, documentation improvements, and more.
-
-### How to Contribute
-1. Fork the repository on GitHub to create a copy of the project in your GitHub account.
-2. Clone the forked repository to your local development environment.
-3. Create a new branch for your contributions. Use a descriptive name that reflects the nature of your changes.
-4. Implement your changes, additions, or improvements in the codebase.
-5. Commit your changes and provide clear and concise commit messages.
-6. Push your changes to your GitHub repository.
-7. Submit a pull request to the original repository, describing the changes you have made and the purpose of your contribution.
-Your pull request will be reviewed by the maintainers, and feedback or additional changes may be requested. Once your contribution is approved, it will be merged into the main repository, and your work will be acknowledged in the project's history.
-
-### Contact Information
-For any inquiries, questions, or discussions related to the Rheological Analysis Toolbox or its development, please feel free to reach out to:
-
-Name: Konstantinos Antonopoulos | Email: k.antono@outlook.com
-
-We welcome your active participation and collaboration in making the Rheological Analysis Toolbox a valuable resource for rheological analysis and data processing in the field of Osteoarthritis diagnosis. Together, we can advance research and contribute to the improvement of medical knowledge in this important area. Thank you for your contributions!
