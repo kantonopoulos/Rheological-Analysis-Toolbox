@@ -8,11 +8,11 @@
 5. [Installation](#installation)
 
 ## Introduction
-The Rheological Analysis Toolbox is a comprehensive set of tools designed for performing rheological analysis and data processing of synovial fluid samples. Its main purpose is to aid in the diagnosis of Osteoarthritis (OA) by analyzing the rheological properties of synovial fluid samples. This toolbox has been developed as part of a research project aimed at creating a medical device for OA diagnosis based on rheological data.
+The Rheological Analysis Toolbox is a comprehensive set of tools designed for performing rheological analysis and data processing of synovial fluid samples. Its main purpose is to aid in the diagnosis of Osteoarthritis (OA) by analyzing the rheological properties of synovial fluid samples. This toolbox has been developed as part of a research project aimed at creating a medical device for OA diagnosis based on rheological data. It was a part of my thesis project in Chemical Engineering at Aristotle University of Thessaloniki.
 
 **Python Version: 3.8 or later**
 
-The full documentation and examples can be found in this [link](https://github.com/kantonopoulos/Rheological-Analysis-Toolbox/blob/main/Documentation/toolbox_documentation.md).
+The full documentation and examples can be found in this [link](https://github.com/kantonopoulos/Rheological-Analysis-Toolbox/blob/main/Documentation/toolbox_documentation.md). Information about the results of the study in the form of a short summary of my diploma thesis can be found in this [line](https://github.com/kantonopoulos/Rheological-Analysis-Toolbox/blob/main/Documentation/KAntonopoulos_Thesis_Summary.pdf).
 
 ## What can I do with the Rheological Analysis Toolbox?
 The Rheological Analysis Toolbox offers a wide range of functionalities, empowering researchers and medical practitioners to perform comprehensive analysis of synovial fluid samples and derive valuable insights. The key capabilities of the toolbox include:
