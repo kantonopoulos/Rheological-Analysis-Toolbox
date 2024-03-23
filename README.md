@@ -3,8 +3,9 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [What can I do with the Rheological Analysis Toolbox?](#what-can-i-do-with-the-rheological-analysis-toolbox?)
-3. [License](#license)
-4. [Installation](#installation)
+3. [Repository Structure](#repository-structure)
+4. [License](#license)
+5. [Installation](#installation)
 
 ## Introduction
 The Rheological Analysis Toolbox is a comprehensive set of tools designed for performing rheological analysis and data processing of synovial fluid samples. Its main purpose is to aid in the diagnosis of Osteoarthritis (OA) by analyzing the rheological properties of synovial fluid samples. This toolbox has been developed as part of a research project aimed at creating a medical device for OA diagnosis based on rheological data.
@@ -27,6 +28,12 @@ The Rheological Analysis Toolbox offers a wide range of functionalities, empower
 * Data Visualization: Allows researchers to create custom, ready-to-publish box plots for visually representing and interpreting the data.
 * Data Sampling: Researchers can sample their data and produce DataFrames with great numbers of artificial samples simulating the real data distributions.
 * Training and Evaluation of Machine Learning Models: The toolbox can train and validate machine learning models, such as Logistic Regression models and evaluate them with multiple techniques, such as cross-validation or ROC analysis.
+
+## Repository Structure
+- Jupyter Notebook: Contains the Python code for the project.
+- Data: Includes datasets used for the analysis.
+- Results: Contains example visualizations and sample reports.
+- Documentation: Additional documentation and resources related to the project.
 
 ## License
 The Rheological Analysis Toolbox is licensed under the "Laboratory Use License" agreement. This license is exclusively intended for use within the Biomedical Lab of the Chemical Engineering Faculty at Aristotle University of Thessaloniki. The use of the toolbox is limited to researchers, staff, and students affiliated with the lab for academic and research purposes. The full license can be found in this [link](https://github.com/Synovial-Fluid-Research-Programme/Rheological-Analysis-Toolbox/blob/main/LICENSE).
