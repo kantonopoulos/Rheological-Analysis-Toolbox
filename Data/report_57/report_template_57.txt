@@ -1,0 +1,30 @@
+# Format information
+Font = Arial
+
+# Basic information
+Author = Konstantinos Antonopoulos
+Supervisor = Prof. Amalia Aggeli
+
+# Sample's description
+im1 = Data/report_57/Picture1.jpg
+im2 = Data/report_57/Picture2.jpg
+im3 = Data/report_57/Picture3.jpg
+im4 = Data/report_57/Picture4.jpg
+im5 = Data/report_57/Picture3.jpg
+im6 = Data/report_57/Picture4.jpg
+im7 = Data/report_57/Picture3.jpg
+im8 = Data/report_57/Picture4.jpg
+im9 = Data/report_57/ts.png
+im10 = Data/report_57/fs.png
+im11 = Data/report_57/fl.png
+im12 = Data/report_57/cm.png
+
+# Other information
+test_temp = 25
+
+# Text
+time_text = Nothing worth mentioning.
+freq_text = Nothing worth mentioning.
+flow_text = Nothing worth mentioning.
+cox_text = Nothing worth mentioning.
+results_text = The sample is considered OA.
