@@ -1393,6 +1393,6 @@ mean_cross_val_accuracy = logistic_regression(artificial_df, columns_to_predict)
 print("Mean Cross-Validation Accuracy:", mean_cross_val_accuracy)
 ```
 
-![Screenshot 2023-08-06 172213.png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/Screenshot_2023-08-06_172213.png)
+![Screenshot 2023-08-06 172213.png](images/Screenshot_2023-08-06_172213.png)
 
 ---
