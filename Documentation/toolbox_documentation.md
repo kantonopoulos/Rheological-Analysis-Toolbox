@@ -1090,7 +1090,7 @@ results_df = perform_t_test(healthy_df_log, OA_df_log, column_names)
 display(results_df)
 ```
 
-![Screenshot 2023-08-03 221713.png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/Screenshot_2023-08-03_221713.png)
+![Screenshot 2023-08-03 221713.png](images/Screenshot_2023-08-03_221713.png)
 
 ## Helper Function: **categorize(df, col, limit, big_var="control")**
 
@@ -1207,7 +1207,7 @@ biomarker_df = biomarker_validation(clean_df, biomarkers_info)
 display(biomarker_df)
 ```
 
-![Screenshot 2023-08-01 115311.png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/Screenshot_2023-08-01_115311.png)
+![Screenshot 2023-08-01 115311.png](images/Screenshot_2023-08-01_115311.png)
 
 ---
 
@@ -1272,13 +1272,13 @@ create_custom_boxplot(clean_cop, "", "Cross-over point (rad/s)", [""],
                       width=0.2, dodge=True, yA=0, yB=None)
 ```
 
-![download.png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/download.png)
+![download.png](images/download.png)
 
-![download (1).png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/download_(1).png)
+![download (1).png](images/download_(1).png)
 
-![download (2).png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/download_(2).png)
+![download (2).png](images/download_(2).png)
 
-![download (3).png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/download_(3).png)
+![download (3).png](images/download_(3).png)
 
 ---
 
@@ -1345,7 +1345,7 @@ artificial_df = artificial_df.reset_index(drop=True)
 display(artificial_df)
 ```
 
-![Screenshot 2023-08-06 172152.png](Rheological%20Analysis%20Toolbox%20caf04f0f4f2c4d30b31cbca9400580f0/Screenshot_2023-08-06_172152.png)
+![Screenshot 2023-08-06 172152.png](images/Screenshot_2023-08-06_172152.png)
 
 ---
 
