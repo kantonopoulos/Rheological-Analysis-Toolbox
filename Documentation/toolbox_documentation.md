@@ -221,7 +221,7 @@ Via the following example code two databases are created, "Database.xlsx" and "S
 
 ```python
 # Create first database
-file_name = "Database.xlsx"
+file_name = "Data/Database.xlsx"
 column_labels = ['ID', 'Date', 'Gender', 'Age', 'Joint', 'Condition', 'Total Volume (mL)', 'Color', 
                      'Transparency', 'Texture', 'Blood', 'Clot', 'Tissue', 'Storage in freezer', 'COVID 19', 
                      'Vaccinated COVID 19', 'COVID 19 now', 'Number of Tests', 'Test Type', 
@@ -229,7 +229,7 @@ column_labels = ['ID', 'Date', 'Gender', 'Age', 'Joint', 'Condition', 'Total Vol
 create_database(file_name, column_labels)
 
 # Create final database
-file_name2 = "Statistical_Analysis_Database.xlsx"    
+file_name2 = "Data/Statistical_Analysis_Database.xlsx"    
 column_labels2 = ["ID", "Gender", "Age", "Joint", "Condition", "Blood", "Clot", "Tissue", 
                      "Tissue or Clot in Test", "Storage in freezer", "COVID 19", 
                      "Vaccined COVID 19", "COVID 19 now", "Time Sweep G' average (Pa)", 
@@ -386,7 +386,7 @@ This function collects and processes test data from user input. It prompts the u
 6. The process of collecting test data is repeated for the number of tests provided in the sample information.
 7. The function returns the list **`tdesc`**, containing all the test information for each test.
 
-## **Function: append_sample_to_database(file_name="Database.xlsx")**
+## **Function: append_sample_to_database(file_name="Data/Database.xlsx")**
 
 ### **Description**
 
@@ -394,7 +394,7 @@ This function appends new sample and its profile data to an existing Excel datab
 
 ### **Parameters**
 
-- **`file_name`** (str, optional): Name of the Excel file to be updated. Default is "Database.xlsx".
+- **`file_name`** (str, optional): Name of the Excel file to be updated. Default is "Data/Database.xlsx".
 
 ### **Returns**
 
@@ -415,7 +415,7 @@ This function appends new sample and its profile data to an existing Excel datab
 
 Via the following example command the function collects the sample information and appends them to "Database.xlsx" Excel database.
 
-**`append_sample_to_database(file_name="Database.xlsx")`**
+**`append_sample_to_database(file_name="Data/Database.xlsx")`**
 
 ---
 
@@ -646,7 +646,7 @@ This function performs Cox-Merz analysis for an Osteoarthritis medical device. I
 6. The PrettyTable is printed to the console.
 7. The calculated values of eta and eta_star are returned as a dictionary with the keys 'eta' and 'eta_star', respectively.
 
-## Function: **sample_analysis(sid, df_ed="Experimental_Data.xlsx")**
+## Function: **sample_analysis(sid, df_ed="Data/Experimental_Data.xlsx")**
 
 ### Description
 
@@ -655,7 +655,7 @@ This function performs sample analysis and prints a results summary for a given 
 ### Parameters
 
 - **`sid`** (str): The sample ID to be analyzed.
-- **`df_ed`** (DataFrame, optional): The input DataFrame containing the experimental data. The default value is "Experimental_Data.xlsx", assuming that the data is loaded from an Excel file.
+- **`df_ed`** (DataFrame, optional): The input DataFrame containing the experimental data. The default value is "Data/Experimental_Data.xlsx", assuming that the data is loaded from an Excel file.
 
 ### Returns
 
@@ -680,13 +680,13 @@ This function performs sample analysis and prints a results summary for a given 
 
 Via the following example command the function loads the rheological primary data of the sample 57 from "Experimental_Data.xlsx" Excel database, performs its complete rheological analysis, prints a summary of them and returns them as a dictionary.
 
-**`analysis_results = sample_analysis(snum=57, df_ed="Experimental_Data.xlsx")`**
+**`analysis_results = sample_analysis(snum=57, df_ed="Data/Experimental_Data.xlsx")`**
 
 ---
 
 # Chapter 6 - Database Filler
 
-## Function: **append_samples_to_final_database(start_row_n, database_file="Database.xlsx", experiment_data_file="Experimental_Data.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx")**
+## Function: **append_samples_to_final_database(start_row_n, database_file="Data/Database.xlsx", experiment_data_file="Data/Experimental_Data.xlsx", analysis_data_file="Data/Statistical_Analysis_Database.xlsx")**
 
 ### Description
 
@@ -695,9 +695,9 @@ This function loads an existing database file, processes the data for new sample
 ### Parameters
 
 - **`start_row_n`** (int): The sample number from which to start the analysis. It indicates the number of the first new sample to be processed.
-- **`database_file`** (str, optional): The filename of the database Excel file. The default value is "Database.xlsx".
-- **`experiment_data_file`** (str, optional): The filename of the Excel file containing the experiment data for the new samples. The default value is "Experimental_Data.xlsx".
-- **`analysis_data_file`** (str, optional): Name of the Excel file to be updated. Default value: "Statistical_Analysis_Database.xlsx".
+- **`database_file`** (str, optional): The filename of the database Excel file. The default value is "Data/Database.xlsx".
+- **`experiment_data_file`** (str, optional): The filename of the Excel file containing the experiment data for the new samples. The default value is "Data/Experimental_Data.xlsx".
+- **`analysis_data_file`** (str, optional): Name of the Excel file to be updated. Default value: "Data/Statistical_Analysis_Database.xlsx".
 
 ### Returns
 
@@ -725,7 +725,7 @@ This function loads an existing database file, processes the data for new sample
 
 Via the following example command the function loads all necessary database files ("Database.xlsx" and "Experimental_Data.xlsx"), performs the rheological analysis of all new samples starting from the sample 60, and stores the results in the "Statistical_Analysis_Database.xlsx" Excel database.
 
-**`append_samples_to_final_database(start_row_n=60, database_file="Database.xlsx", experiment_data_file="Experimental_Data.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx")`**
+**`append_samples_to_final_database(start_row_n=60, database_file="Data/Database.xlsx", experiment_data_file="Data/Experimental_Data.xlsx", analysis_data_file="Data/Statistical_Analysis_Database.xlsx")`**
 
 ---
 
@@ -798,7 +798,7 @@ This function calculates the deviation between two columns of a given DataFrame.
 2. It calculates the deviation between the two columns using the formula: **`deviation = abs(dataframe[col1] - dataframe[col2]) / ((dataframe[col1] + dataframe[col2]) / 2)`**.
 3. The result is a Series containing the deviation values, which is returned as the output.
 
-## Function: **preprocess_data(primary_data_file="Statistical_Analysis_Database.xlsx")**
+## Function: **preprocess_data(primary_data_file="Data/Statistical_Analysis_Database.xlsx")**
 
 ### Description
 
@@ -806,7 +806,7 @@ This function preprocesses the primary data contained in an Excel file by perfor
 
 ### Parameters
 
-- **`primary_data_file`** (str, optional): The filename of the Excel file containing the primary data. The default value is "Statistical_Analysis_Database.xlsx".
+- **`primary_data_file`** (str, optional): The filename of the Excel file containing the primary data. The default value is "Data/Statistical_Analysis_Database.xlsx".
 
 ### Returns
 
@@ -907,7 +907,7 @@ Via the following example code the primary data from the "Statistical_Analysis_D
 5. To some of these data
 
 ```python
-database = preprocess_data(primary_data_file="Statistical_Analysis_Database.xlsx")
+database = preprocess_data(primary_data_file="Data/Statistical_Analysis_Database.xlsx")
 
 # Filter and clean dataframes based on certain conditions
 clean_df = database[(database["Joint"] == "knee") & (database["Blood"] == "no") & (database["Tissue or Clot in Test"] == "no")]
