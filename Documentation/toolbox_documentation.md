@@ -1,9 +1,9 @@
 # Rheological Analysis Toolbox
 
-Created By: Kostas Antonopoulos
-Created: July 27, 2023 10:07 PM
-Last Edited Time: August 8, 2023 3:47 PM
-Last Edited By: Kostas Antonopoulos
+Created By: Konstantinos Antonopoulos
+Created: July 27, 2023
+Last Edited Time: March 23, 2024
+Last Edited By: Konstantinos Antonopoulos
 
 > 📘 Any questions or thoughts? You can contact me at **k.antono@outlook.com**.
 > 
@@ -196,12 +196,12 @@ This function creates a new Excel database file as an empty workbook with specif
 
 ### **Behavior**
 
-1. The function first checks if a file with the given **`file_name`** already exists in the current directory using the helper function `**get_unique_file_name(file_name)**`.
+1. The function first checks if a file with the given **`file_name`** already exists in the current directory using the helper function **`get_unique_file_name(file_name)`**.
 2. If the file exists, it prompts the user to choose between replacing the file or adding to it.
     - If the user chooses to replace ('R'), the function creates a new Excel workbook with the specified **`file_name`** and the provided **`column_labels`**, overwriting the existing file.
     - If the user chooses to add ('A'), the function appends a number to the **`file_name`** to make it unique, then creates a new Excel workbook with this unique name and the provided **`column_labels`**.
     - If the user inputs an invalid choice, the program displays an error message and exits.
-3. If the file does not exist, the function directly creates a new Excel workbook with the provided **`file_name`** and **`column_labels`** using the helper function `**create_new_workbook(file_name, column_labels)**`.
+3. If the file does not exist, the function directly creates a new Excel workbook with the provided **`file_name`** and **`column_labels`** using the helper function **`create_new_workbook(file_name, column_labels)`**.
 
 ### Calling Example
 
@@ -403,7 +403,7 @@ This function appends new sample and its profile data to an existing Excel datab
 
 Via the following example command the function collects the sample information and appends them to "Database.xlsx" Excel database.
 
-`**append_sample_to_database(file_name="Database.xlsx")**`
+**`append_sample_to_database(file_name="Database.xlsx")`**
 
 ---
 
@@ -649,18 +649,18 @@ This function performs sample analysis and prints a results summary for a given 
 
 - **`dict`**: A dictionary containing the analysis results. The dictionary has the following keys:
     - **`'time_sweep'`**: Contains the mean_values and std_values of the time sweep data if present in the DataFrame.
-    - `**'frequency_sweep'**`: Contains various rheological parameters (G_pf, G_dpf, G_pf1, G_dpf1, G_pf2, G_dpf2, eta_star, and crossover_point) from the frequency sweep data if present.
+    - **`'frequency_sweep'`**: Contains various rheological parameters (G_pf, G_dpf, G_pf1, G_dpf1, G_pf2, G_dpf2, eta_star, and crossover_point) from the frequency sweep data if present.
     - **`'flow_step'`**: Contains rheological parameters (eta_0, eta_inf, K, n, error, and eta) from the flow step data if present.
-    - `**'cox_merz'**`: Contains the viscosity (eta) and complex viscosity (eta_star) obtained from the Cox-Merz analysis if both frequency sweep and flow step data are present.
+    - **`'cox_merz'`**: Contains the viscosity (eta) and complex viscosity (eta_star) obtained from the Cox-Merz analysis if both frequency sweep and flow step data are present.
 
 ### Behavior
 
 1. It reads the experimental data for the given sample ID (sid) from the Excel file specified by the **`df_ed`** parameter and stores it in the DataFrame **`df_ed`**.
 2. The function performs various analyses based on the presence of specific columns in the DataFrame:
-    - If 'time (min)' column is present, it calls the **`time_sweep_data_analysis()`** function to analyze the time sweep data and stores the mean and standard deviation values in the `**'time_sweep'**` dictionary entry.
+    - If 'time (min)' column is present, it calls the **`time_sweep_data_analysis()`** function to analyze the time sweep data and stores the mean and standard deviation values in the **`'time_sweep'`** dictionary entry.
     - If 'ang. Frequency (rad/s)' column is present, it calls the **`frequency_sweep_data_analysis()`** function to analyze the frequency sweep data and stores the rheological parameters in the **`'frequency_sweep'`** dictionary entry.
-    - If 'shear rate (1/s)' column is present, it calls the **`flow_step_data_analysis()`** function to analyze the flow step data and stores the rheological parameters in the `**'flow_step'**` dictionary entry.
-    - If both 'ang. Frequency (rad/s)' and 'shear rate (1/s)' columns are present, it calls the **`cox_merz_rule()`** function to perform Cox-Merz analysis and stores the results in the `**'cox_merz'**` dictionary entry.
+    - If 'shear rate (1/s)' column is present, it calls the **`flow_step_data_analysis()`** function to analyze the flow step data and stores the rheological parameters in the **`'flow_step'`** dictionary entry.
+    - If both 'ang. Frequency (rad/s)' and 'shear rate (1/s)' columns are present, it calls the **`cox_merz_rule()`** function to perform Cox-Merz analysis and stores the results in the **`'cox_merz'`** dictionary entry.
 3. If any specific type of data is missing, a message indicating its absence will be printed to the console.
 4. The function returns the dictionary containing the analysis results for the given sample ID.
 
@@ -668,7 +668,7 @@ This function performs sample analysis and prints a results summary for a given 
 
 Via the following example command the function loads the rheological primary data of the sample 57 from "Experimental_Data.xlsx" Excel database, performs its complete rheological analysis, prints a summary of them and returns them as a dictionary.
 
-`**analysis_results = sample_analysis(snum=57, df_ed="Experimental_Data.xlsx")**`
+**`analysis_results = sample_analysis(snum=57, df_ed="Experimental_Data.xlsx")`**
 
 ---
 
@@ -685,11 +685,11 @@ This function loads an existing database file, processes the data for new sample
 - **`start_row_n`** (int): The sample number from which to start the analysis. It indicates the number of the first new sample to be processed.
 - **`database_file`** (str, optional): The filename of the database Excel file. The default value is "Database.xlsx".
 - **`experiment_data_file`** (str, optional): The filename of the Excel file containing the experiment data for the new samples. The default value is "Experimental_Data.xlsx".
-- `**analysis_data_file**` (str, optional): Name of the Excel file to be updated. Default value: "Statistical_Analysis_Database.xlsx".
+- **`analysis_data_file`** (str, optional): Name of the Excel file to be updated. Default value: "Statistical_Analysis_Database.xlsx".
 
 ### Returns
 
-- `**result**` (DataFrame): The updated database with the analysis results. The DataFrame includes data for both the existing samples from the original database and the new samples from the experiment data file.
+- **`result`** (DataFrame): The updated database with the analysis results. The DataFrame includes data for both the existing samples from the original database and the new samples from the experiment data file.
 
 ### Behavior
 
@@ -713,7 +713,7 @@ This function loads an existing database file, processes the data for new sample
 
 Via the following example command the function loads all necessary database files ("Database.xlsx" and "Experimental_Data.xlsx"), performs the rheological analysis of all new samples starting from the sample 60, and stores the results in the "Statistical_Analysis_Database.xlsx" Excel database.
 
-`**append_samples_to_final_database(start_row_n=60, database_file="Database.xlsx", experiment_data_file="Experimental_Data.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx")**`
+**`append_samples_to_final_database(start_row_n=60, database_file="Database.xlsx", experiment_data_file="Experimental_Data.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx")`**
 
 ---
 
@@ -727,11 +727,11 @@ This function generates a technical report for a specific sample identified by t
 
 ### Parameters
 
-- `**snum**` (int): The sample ID number for which the report is generated.
+- **`snum`** (int): The sample ID number for which the report is generated.
 - **`database_file`** (str, optional): The filename of the database Excel file. The default value is "Database.xlsx".
-- `**analysis_data_file**` (str, optional): The filename of the Excel file containing the statistical analysis data. The default value is "Statistical_Analysis_Database.xlsx".
-- `**txt_file**` (str, optional): The filename of the text file serving as a report template. The default value is "report_template.txt".
-- `**t_start**` (float, optional): The starting time in minutes for data analysis in the Time Sweep test. The default value is 0.5.
+- **`analysis_data_file`** (str, optional): The filename of the Excel file containing the statistical analysis data. The default value is "Statistical_Analysis_Database.xlsx".
+- **`txt_file`** (str, optional): The filename of the text file serving as a report template. The default value is "report_template.txt".
+- **`t_start`** (float, optional): The starting time in minutes for data analysis in the Time Sweep test. The default value is 0.5.
 - **`t_finish`** (float, optional): The ending time in minutes for data analysis in the Time Sweep test. The default value is 5.
 
 ### Returns
@@ -753,7 +753,7 @@ This function generates a technical report for a specific sample identified by t
 
 Via the following example command the function loads the necessary sample’s 57 data from "Database.xlsx" and "Statistical_Analysis_Database.xlsx" Excel databases, as well as from "report_template.txt"txt file and creates the technical report of the sample’s analysis results.
 
-`**create_sample_report(snum=57, database_file="Database.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx", txt_file="report_template.txt")**`
+**`create_sample_report(snum=57, database_file="Database.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx", txt_file="report_template.txt")`**
 
 ---
 
@@ -767,12 +767,12 @@ This function calculates the deviation between two columns of a given DataFrame.
 
 ### Parameters
 
-- `**col1**` (str): The name of the first column for which the deviation needs to be calculated.
+- **`col1`** (str): The name of the first column for which the deviation needs to be calculated.
 - **`col2`** (str): The name of the second column for which the deviation needs to be calculated.
-- `**dataframe**` (DataFrame): The DataFrame containing the two columns for deviation calculation.
+- **`dataframe`** (DataFrame): The DataFrame containing the two columns for deviation calculation.
 
 <aside>
-💡 The dataframe parameter should have the value of **`database`**, which refers to the DataFrame variable **`database`** of the `**preprocess_data()**` function.
+💡 The dataframe parameter should have the value of `database`, which refers to the DataFrame variable `database` of the `preprocess_data()` function.
 
 </aside>
 
@@ -794,11 +794,11 @@ This function preprocesses the primary data contained in an Excel file by perfor
 
 ### Parameters
 
-- `**primary_data_file**` (str, optional): The filename of the Excel file containing the primary data. The default value is "Statistical_Analysis_Database.xlsx".
+- **`primary_data_file`** (str, optional): The filename of the Excel file containing the primary data. The default value is "Statistical_Analysis_Database.xlsx".
 
 ### Returns
 
-- `**database**` (DataFrame): A new DataFrame with the preprocessed data.
+- **`database`** (DataFrame): A new DataFrame with the preprocessed data.
 
 ### Behavior
 
@@ -818,12 +818,12 @@ This function applies the logarithm (base 10) transformation to specified column
 
 ### Parameters
 
-- `**df**` (DataFrame): The input DataFrame to be transformed.
-- `**columns_to_log**` (list of str): A list containing the names of the columns that will undergo the logarithm transformation.
+- **`df`** (DataFrame): The input DataFrame to be transformed.
+- **`columns_to_log`** (list of str): A list containing the names of the columns that will undergo the logarithm transformation.
 
 ### Returns
 
-- `**df**` (DataFrame): A new DataFrame with the specified columns logarithmically transformed.
+- **`df`** (DataFrame): A new DataFrame with the specified columns logarithmically transformed.
 
 ### Behavior
 
@@ -834,7 +834,7 @@ This function applies the logarithm (base 10) transformation to specified column
 5. The modified DataFrame with the logarithmically transformed columns is returned as the output.
 
 <aside>
-💡 It is assumed that the columns specified in **`columns_to_log`** contain numerical data, and the function will raise an error if non-numeric columns or columns with invalid data are included in the list.
+💡 It is assumed that the columns specified in `columns_to_log` contain numerical data, and the function will raise an error if non-numeric columns or columns with invalid data are included in the list.
 
 </aside>
 
@@ -846,14 +846,14 @@ This function prepares a DataFrame for plotting by performing the following step
 
 ### Parameters:
 
-- `**df**` (DataFrame): The input DataFrame that needs to be prepared for plotting.
-- `**id_vars**` (str or list of str): The column(s) to use as identifier variables when melting the DataFrame. These columns will be retained as they are during the melting process.
-- `**value_vars**` (str or list of str): The column(s) to melt and use as value variables when transforming the DataFrame to long format. These columns will be combined into two new columns: one for the variable names and another for the corresponding values.
-- `**replacements**` (dict, optional): A dictionary containing replacement values for specific variable names. The keys of the dictionary are the original variable names to be replaced, and the values are the new variable names. This parameter is optional and has a default value of None.
+- **`df`** (DataFrame): The input DataFrame that needs to be prepared for plotting.
+- **`id_vars`** (str or list of str): The column(s) to use as identifier variables when melting the DataFrame. These columns will be retained as they are during the melting process.
+- **`value_vars`** (str or list of str): The column(s) to melt and use as value variables when transforming the DataFrame to long format. These columns will be combined into two new columns: one for the variable names and another for the corresponding values.
+- **`replacements`** (dict, optional): A dictionary containing replacement values for specific variable names. The keys of the dictionary are the original variable names to be replaced, and the values are the new variable names. This parameter is optional and has a default value of None.
 
 ### Returns:
 
-- `**plot**` (DataFrame): A new DataFrame prepared for plotting with the specified columns in long format.
+- **`plot`** (DataFrame): A new DataFrame prepared for plotting with the specified columns in long format.
 
 ### Behavior:
 
@@ -871,13 +871,13 @@ This function prepares a DataFrame for legend replacement by mapping specified v
 
 ### Parameters:
 
-- `**df**` (pd.DataFrame): The input DataFrame that requires legend replacement.
-- `**A**` (str): The replacement value for the original value 'yes' found in the DataFrame.
-- `**B`** (str): The replacement value for the original value 'no' found in the DataFrame.
+- **`df`** (pd.DataFrame): The input DataFrame that requires legend replacement.
+- **`A`** (str): The replacement value for the original value 'yes' found in the DataFrame.
+- **`B`** (str): The replacement value for the original value 'no' found in the DataFrame.
 
 ### Returns:
 
-- `**DataFrame**`: A new DataFrame prepared for legend replacement with the specified replacements applied.
+- **`DataFrame`**: A new DataFrame prepared for legend replacement with the specified replacements applied.
 
 ### Behavior:
 
@@ -888,9 +888,9 @@ This function prepares a DataFrame for legend replacement by mapping specified v
 
 Via the following example code the primary data from the "Statistical_Analysis_Database.xlsx" Excel database are preprocessed and prepared for further analysis. 
 
-1. The data are loaded from "Statistical_Analysis_Database.xlsx" Excel database and via the `**preprocess_data()**` helper function they are filtered and cleaned up.
+1. The data are loaded from "Statistical_Analysis_Database.xlsx" Excel database and via the **`preprocess_data()`** helper function they are filtered and cleaned up.
 2. They are categorised into dataframes with subsets of the total database with specific characteristics each time, such as samples’ from specific joint or with specific condition.
-3. Some of these subsets are also logarithmically transformed via $log(var+1)$ equation with the use of `**apply_logarithm()**` helper function.
+3. Some of these subsets are also logarithmically transformed via $log(var+1)$ equation with the use of **`apply_logarithm()`** helper function.
 4. The DataFrames are prepared for plotting by melting, dropping NaN values, and applying replacements to variable names.
 5. To some of these data
 
@@ -1026,28 +1026,28 @@ This function performs basic statistics calculations (count, mean value, standar
 
 ### Parameters
 
-- `**data1**` (DataFrame): The first DataFrame containing the first set of data for comparison.
-- `**data2**` (DataFrame): The second DataFrame containing the second set of data for comparison.
-- `**column_names**` (list): A list of column names in both DataFrames on which the t-test will be performed.
-- `**alpha**` (float, optional): The significance level for the hypothesis test. It determines the threshold for accepting or rejecting the null hypothesis. The default value is 0.05, which corresponds to a 5% significance level.
+- **`data1`** (DataFrame): The first DataFrame containing the first set of data for comparison.
+- **`data2`** (DataFrame): The second DataFrame containing the second set of data for comparison.
+- **`column_names`** (list): A list of column names in both DataFrames on which the t-test will be performed.
+- **`alpha`** (float, optional): The significance level for the hypothesis test. It determines the threshold for accepting or rejecting the null hypothesis. The default value is 0.05, which corresponds to a 5% significance level.
 
 ### Returns
 
-- `**results_df**` (DataFrame): A pandas DataFrame containing the results of the basic statistics and the t-test for each specified column. The DataFrame includes the following columns:
-    - `**'Column'**`: The name of the column for which the basic statistics calculations and t-test were performed.
-    - `**'Count 1'**`: The number of column elements of first input DataFrame.
-    - `**'Mean 1'**`: The mean value of column elements of first input DataFrame.
-    - `**'Std 1'**`: The standard deviation of column elements of first input DataFrame.
-    - `**'Max 1'**`: The max value of column elements of first input DataFrame.
-    - `**'Min 1'**`: The min value of column elements of first input DataFrame.
-    - `**'Count 2'**`: The number of column elements of second input DataFrame.
-    - `**'Mean 2'**`: The mean value of column elements of second input DataFrame.
-    - `**'Std 2'**`: The standard deviation of column elements of second input DataFrame.
-    - `**'Max 2'**`: The max value of column elements of second input DataFrame.
-    - `**'Min 2'**`: The min value of column elements of second input DataFrame.
-    - `**'t-statistic'**`: The calculated t-statistic for the t-test.
-    - `**'p-value'**`: The p-value resulting from the t-test.
-    - `**'Hypothesis'**`: The hypothesis decision, indicating whether to 'Reject' or 'Accept' the null hypothesis based on the p-value and the specified alpha level.
+- `**results_df` (DataFrame): A pandas DataFrame containing the results of the basic statistics and the t-test for each specified column. The DataFrame includes the following columns:
+    - **`'Column'`**: The name of the column for which the basic statistics calculations and t-test were performed.
+    - **`'Count 1'`**: The number of column elements of first input DataFrame.
+    - **`'Mean 1'`**: The mean value of column elements of first input DataFrame.
+    - **`'Std 1'`**: The standard deviation of column elements of first input DataFrame.
+    - **`'Max 1'`**: The max value of column elements of first input DataFrame.
+    - **`'Min 1'`**: The min value of column elements of first input DataFrame.
+    - **`'Count 2'`**: The number of column elements of second input DataFrame.
+    - **`'Mean 2'`**: The mean value of column elements of second input DataFrame.
+    - **`'Std 2'`**: The standard deviation of column elements of second input DataFrame.
+    - **`'Max 2'`**: The max value of column elements of second input DataFrame.
+    - **`'Min 2'`**: The min value of column elements of second input DataFrame.
+    - **`'t-statistic'`**: The calculated t-statistic for the t-test.
+    - **`'p-value'`**: The p-value resulting from the t-test.
+    - **`'Hypothesis'`**: The hypothesis decision, indicating whether to 'Reject' or 'Accept' the null hypothesis based on the p-value and the specified alpha level.
 
 ### Behavior
 
@@ -1066,7 +1066,7 @@ This function performs basic statistics calculations (count, mean value, standar
 
 ### Calling Example
 
-Via the following example code an independent two-sample t-test between two sets of data, logarithmically transformed OA and healthy clean samples. The t and p values, as well as the rejection or acceptance of the null hypothesis are saved in a DataFrame `**results_df**`, and displayed. The output displayed DataFrame of this particular example is presented bellow the coding cell.
+Via the following example code an independent two-sample t-test between two sets of data, logarithmically transformed OA and healthy clean samples. The t and p values, as well as the rejection or acceptance of the null hypothesis are saved in a DataFrame **`results_df`**, and displayed. The output displayed DataFrame of this particular example is presented bellow the coding cell.
 
 ```python
 # Assuming you have DataFrames called 'OA_df_log' and 'healthy_df_log'
@@ -1100,14 +1100,14 @@ This function categorizes the data in the DataFrame based on a specified column 
 
 ### Parameters
 
-- `**df**` (DataFrame): The DataFrame containing the data to be categorized.
-- `**col**` (str): The name of the column in the DataFrame used for categorization.
-- `**limit**` (float): The threshold value for the categorization. Values above or below this limit will be assigned to different categories depending on the **`big_var`** parameter.
+- **`df`** (DataFrame): The DataFrame containing the data to be categorized.
+- **`col`** (str): The name of the column in the DataFrame used for categorization.
+- **`limit`** (float): The threshold value for the categorization. Values above or below this limit will be assigned to different categories depending on the **`big_var`** parameter.
 - **`big_var`** (str, optional): The variable used to determine whether to consider values above or below the limit as "positive". The default value is "control", which means that values below the limit will be considered "positive". If set to any other value, values above the limit will be considered "positive".
 
 ### Returns
 
-- `**df**` (DataFrame): The modified DataFrame with a new column named "Category" containing the categories assigned based on the comparison with the specified limit.
+- **`df`** (DataFrame): The modified DataFrame with a new column named "Category" containing the categories assigned based on the comparison with the specified limit.
 
 ### Behavior
 
@@ -1128,11 +1128,11 @@ This function counts the occurrences of each category in the "Category" column o
 
 ### Parameters
 
-- `**df**` (DataFrame): The DataFrame containing the "Category" column.
+- **`df`** (DataFrame): The DataFrame containing the "Category" column.
 
 ### Returns
 
-- `**counts**` (dict): A dictionary containing the counts of each category in the format {"Category": count}.
+- **`counts`** (dict): A dictionary containing the counts of each category in the format {"Category": count}.
 
 ### Behavior
 
@@ -1148,26 +1148,26 @@ This function performs biomarker validation by categorizing data and calculating
 
 ### Parameters
 
-- `**df**` (DataFrame): The DataFrame containing the biomarker data.
-- `**biomarkers_info**` (list): A list of lists containing biomarker information for validation. Each list in the format: [Biomarker_Name, Column_Name, Threshold, Category], where:
-    - `**Biomarker_Name**` (str): The name of the biomarker.
-    - `**Column_Name**` (str): The name of the column in the DataFrame containing the biomarker data.
-    - `**Threshold**` (float): The threshold value for categorization of the biomarker data.
-    - `**Category**` (str): The variable used to determine whether values above or below the threshold are considered "positive". Options are "control" (values below threshold are "positive") or any other value (values above threshold are "positive").
+- **`df`** (DataFrame): The DataFrame containing the biomarker data.
+- **`biomarkers_info`** (list): A list of lists containing biomarker information for validation. Each list in the format: [Biomarker_Name, Column_Name, Threshold, Category], where:
+    - **`Biomarker_Name`** (str): The name of the biomarker.
+    - **`Column_Name`** (str): The name of the column in the DataFrame containing the biomarker data.
+    - **`Threshold`** (float): The threshold value for categorization of the biomarker data.
+    - **`Category`** (str): The variable used to determine whether values above or below the threshold are considered "positive". Options are "control" (values below threshold are "positive") or any other value (values above threshold are "positive").
 
 ### Returns
 
-- `**biomarker_df**` (DataFrame): A DataFrame containing biomarker validation metrics for each biomarker. The DataFrame includes the following columns:
+- **`biomarker_df`** (DataFrame): A DataFrame containing biomarker validation metrics for each biomarker. The DataFrame includes the following columns:
     - **`"Biomarker"`**: The name of the biomarker.
-    - `**"TN"**`: Count of True Negative cases.
+    - **`"TN"`**: Count of True Negative cases.
     - **`"TP"`**: Count of True Positive cases.
-    - `**"FN"**`: Count of False Negative cases.
-    - `**"FP"**`: Count of False Positive cases.
-    - `**"Threshold"**`: The threshold value used for biomarker validation.
-    - `**"Sensitivity"**`: Sensitivity metric calculated as TP / (TP + FN).
-    - `**"Specificity"**`: Specificity metric calculated as TN / (TN + FP).
-    - `**"Accuracy"**`: Accuracy metric calculated as (TP + TN) / (TP + TN + FP + FN).
-    - `**"Youden's Index"**`: Youden's Index metric calculated as Sensitivity + Specificity - 1.
+    - **`"FN"`**: Count of False Negative cases.
+    - **`"FP"`**: Count of False Positive cases.
+    - **`"Threshold"`**: The threshold value used for biomarker validation.
+    - **`"Sensitivity"`**: Sensitivity metric calculated as TP / (TP + FN).
+    - **`"Specificity"`**: Specificity metric calculated as TN / (TN + FP).
+    - **`"Accuracy"`**: Accuracy metric calculated as (TP + TN) / (TP + TN + FP + FN).
+    - **`"Youden's Index"`**: Youden's Index metric calculated as Sensitivity + Specificity - 1.
 
 ### Behavior
 
@@ -1184,7 +1184,7 @@ This function performs biomarker validation by categorizing data and calculating
 
 ### Calling Example
 
-Via the following example code the biomarker validation is performed. The sample data from `**clean_df**` DataFrame are categorised with the particular threshold values, provided by the user in the `**biomarkers_info**` list, and the Key Performance Indicators (Sensitivity, Specificity, Accuracy, and Youden’s Index) are calculated, saved in a DataFrame `**biomarker_df**`, and displayed. The output displayed DataFrame of this particular example is presented bellow the coding cell.
+Via the following example code the biomarker validation is performed. The sample data from **`clean_df`** DataFrame are categorised with the particular threshold values, provided by the user in the **`biomarkers_info`** list, and the Key Performance Indicators (Sensitivity, Specificity, Accuracy, and Youden’s Index) are calculated, saved in a DataFrame **`biomarker_df`**, and displayed. The output displayed DataFrame of this particular example is presented bellow the coding cell.
 
 ```python
 # Assuming you have a DataFrame called 'clean_df'
@@ -1222,20 +1222,20 @@ This function creates a custom box plot using Seaborn, a popular Python data vis
 ### Parameters
 
 - **`data`** (DataFrame): The DataFrame containing the data to be plotted.
-- `**x_label**` (str): Label for the x-axis, representing the variable or feature on the x-axis.
-- `**y_label**` (str): Label for the y-axis, representing the values of the variable being analyzed.
-- `**x_ticklabels**` (list): List of tick labels for the x-axis, representing the labels of the different categories or groups displayed on the x-axis.
-- `**hue**` (str): Grouping variable for categorical coloring. This variable is used to split the data into different groups based on its values and color the box plots accordingly.
-- `**hue_order**` (list): Order of hue levels (grouping variable) for categorical coloring. It specifies the order in which the different levels of the hue variable should be displayed.
-- `**legend_labels**` (list): Labels for the legend. These labels provide a custom representation for the different categories displayed in the legend of the box plot.
-- `**width**` (float, optional): Width of the boxes. It determines the width of the boxes representing each category in the box plot. The default value is 0.8.
-- `**dodge**` (bool, optional): When True, use a small positional jitter to avoid overlap when plotting hue levels. If set to False, the box plots for different hue levels may overlap. The default value is True.
-- `**yA**` (int, optional): The lowest y-axis limit. It sets the lower limit for the y-axis values displayed in the plot. The default value is 0.
-- `**yB**` (int, optional): The highest y-axis limit. It sets the upper limit for the y-axis values displayed in the plot. If set to None, there is no change in the y-axis limits. The default value is None.
+- **`x_label`** (str): Label for the x-axis, representing the variable or feature on the x-axis.
+- **`y_label`** (str): Label for the y-axis, representing the values of the variable being analyzed.
+- **`x_ticklabels`** (list): List of tick labels for the x-axis, representing the labels of the different categories or groups displayed on the x-axis.
+- **`hue`** (str): Grouping variable for categorical coloring. This variable is used to split the data into different groups based on its values and color the box plots accordingly.
+- **`hue_order`** (list): Order of hue levels (grouping variable) for categorical coloring. It specifies the order in which the different levels of the hue variable should be displayed.
+- **`legend_labels`** (list): Labels for the legend. These labels provide a custom representation for the different categories displayed in the legend of the box plot.
+- **`width`** (float, optional): Width of the boxes. It determines the width of the boxes representing each category in the box plot. The default value is 0.8.
+- **`dodge`** (bool, optional): When True, use a small positional jitter to avoid overlap when plotting hue levels. If set to False, the box plots for different hue levels may overlap. The default value is True.
+- **`yA`** (int, optional): The lowest y-axis limit. It sets the lower limit for the y-axis values displayed in the plot. The default value is 0.
+- **`yB`** (int, optional): The highest y-axis limit. It sets the upper limit for the y-axis values displayed in the plot. If set to None, there is no change in the y-axis limits. The default value is None.
 
 ### Returns
 
-- `**None**`: The function does not return any value explicitly; It generates the custom box plot and displays it as an interactive plot.
+- **`None`**: The function does not return any value explicitly; It generates the custom box plot and displays it as an interactive plot.
 
 ### Behavior
 
@@ -1250,7 +1250,7 @@ This function creates a custom box plot using Seaborn, a popular Python data vis
 
 ### Calling Example
 
-Via the following example code the 4 main box plots for data visualization purposes are generated. With these 4 box plots a comparison of the biomarkers’ values between OA and healthy clean samples is performed.  The function `**create_custom_boxplot()**` is called four times, each time with different arguments, such as different x and y variables and labels, legends, etc. The output plots of this particular example is presented bellow the coding cell.
+Via the following example code the 4 main box plots for data visualization purposes are generated. With these 4 box plots a comparison of the biomarkers’ values between OA and healthy clean samples is performed.  The function **`create_custom_boxplot()`** is called four times, each time with different arguments, such as different x and y variables and labels, legends, etc. The output plots of this particular example is presented bellow the coding cell.
 
 ```python
 # Assuming you have DataFrames called 'clean_osc', 'clean_tand', 'clean_n', and 'clean_cop'
@@ -1298,7 +1298,7 @@ This function samples from a multivariate normal distribution based on specified
 
 ### **Returns**
 
-- `**sampled_data**` (DataFrame): A DataFrame containing the sampled data.
+- **`sampled_data`** (DataFrame): A DataFrame containing the sampled data.
 
 ### **Behavior**
 
@@ -1364,7 +1364,7 @@ This function performs logistic regression modeling on a given DataFrame using s
 
 ### **Returns**
 
-- `**cross_val_accuracy`** (float): The mean cross-validation accuracy of the trained model.
+- **`cross_val_accuracy`** (float): The mean cross-validation accuracy of the trained model.
 
 ### **Behavior**
 
