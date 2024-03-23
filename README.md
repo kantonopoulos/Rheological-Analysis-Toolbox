@@ -11,7 +11,7 @@ The Rheological Analysis Toolbox is a comprehensive set of tools designed for pe
 
 **Python Version: 3.8 or later**
 
-The full documentation and examples can be found in this [link](https://north-mandevilla-d3a.notion.site/Rheological-Analysis-Toolbox-caf04f0f4f2c4d30b31cbca9400580f0?pvs=4).
+The full documentation and examples can be found in this [link](https://github.com/kantonopoulos/Rheological-Analysis-Toolbox/blob/main/Documentation/toolbox_documentation.md).
 
 ## What can I do with the Rheological Analysis Toolbox?
 The Rheological Analysis Toolbox offers a wide range of functionalities, empowering researchers and medical practitioners to perform comprehensive analysis of synovial fluid samples and derive valuable insights. The key capabilities of the toolbox include:
