@@ -731,7 +731,7 @@ Via the following example command the function loads all necessary database file
 
 # Chapter 7 - Technical Report Generator
 
-## Function: **create_sample_report(snum, database_file="Database.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx", txt_file="report_template.txt", t_start=0.5, t_finish=5)**
+## Function: **create_sample_report(snum, database_file="Data/Database.xlsx", analysis_data_file="Data/Statistical_Analysis_Database.xlsx", txt_file="Data/report_57/report_template.txt", t_start=0.5, t_finish=5)**
 
 ### Description
 
@@ -740,9 +740,9 @@ This function generates a technical report for a specific sample identified by t
 ### Parameters
 
 - **`snum`** (int): The sample ID number for which the report is generated.
-- **`database_file`** (str, optional): The filename of the database Excel file. The default value is "Database.xlsx".
+- **`database_file`** (str, optional): The filename of the database Excel file. The default value is "Data/Database.xlsx".
 - **`analysis_data_file`** (str, optional): The filename of the Excel file containing the statistical analysis data. The default value is "Statistical_Analysis_Database.xlsx".
-- **`txt_file`** (str, optional): The filename of the text file serving as a report template. The default value is "report_template.txt".
+- **`txt_file`** (str, optional): The filename of the text file serving as a report template. The default value is "Data/report_1/report_template_1.txt".
 - **`t_start`** (float, optional): The starting time in minutes for data analysis in the Time Sweep test. The default value is 0.5.
 - **`t_finish`** (float, optional): The ending time in minutes for data analysis in the Time Sweep test. The default value is 5.
 
@@ -765,7 +765,7 @@ This function generates a technical report for a specific sample identified by t
 
 Via the following example command the function loads the necessary sample’s 57 data from "Database.xlsx" and "Statistical_Analysis_Database.xlsx" Excel databases, as well as from "report_template.txt"txt file and creates the technical report of the sample’s analysis results.
 
-**`create_sample_report(snum=57, database_file="Database.xlsx", analysis_data_file="Statistical_Analysis_Database.xlsx", txt_file="report_template.txt")`**
+**`create_sample_report(snum=57, database_file="Data/Database.xlsx", analysis_data_file="Data/Statistical_Analysis_Database.xlsx", txt_file="Data/report_57/report_template_57.txt")`**
 
 ---
 
