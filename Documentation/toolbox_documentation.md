@@ -10,17 +10,17 @@ Last Edited By: Konstantinos Antonopoulos
 
 # Contents
 1. [Introduction](#chapter-1---introduction)
-2. [Installation](#installation)
-3. [Database Creator](#database-creator)
-4. [New Sample Profile Creator](#new-sample-profile-creator)
-5. [Rheology Analyser](#rheology-analyser)
-6. [Database Filler](#database-filler)
-7. [Technical Report Generator](#technical-report-generator)
-8. [Preprocessing Data](#preprocessing-data)
-9. [Statistical Analyser](#statistical-analyser)
-10. [Plotting](#plotting)
-11. [Monte Carlo Simulation](#monte-carlo-simulation)
-12. [Machine Learning Models](#machine-learning-mdels)
+2. [Installation](#chapter-2---installation)
+3. [Database Creator](#chapter-3---database-creator)
+4. [New Sample Profile Creator](#chapter-4---new-sample-profile-creator)
+5. [Rheology Analyser](#chapter-5---rheology-analyser)
+6. [Database Filler](#chapter-6---database-filler)
+7. [Technical Report Generator](#chapter-7---technical-report-generator)
+8. [Preprocessing Data](#chapter-8---preprocessing-data)
+9. [Statistical Analyser](#chapter-9---statistical-analyser)
+10. [Plotting](#chapter-10---plotting)
+11. [Monte Carlo Simulation](#chapter-11---monte-carlo-simulation)
+12. [Machine Learning Models](#chapter-12---machine-learning-mdels)
 
 # Chapter 1 - Introduction
 
