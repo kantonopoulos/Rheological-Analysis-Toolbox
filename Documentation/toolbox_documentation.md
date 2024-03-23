@@ -9,6 +9,18 @@ Last Edited By: Konstantinos Antonopoulos
 > 
 
 # Contents
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Database Creator](#database-creator)
+4. [New Sample Profile Creator](#new-sample-profile-creator)
+5. [Rheology Analyser](#rheology-analyser)
+6. [Database Filler](#database-filler)
+7. [Technical Report Generator](#technical-report-generator)
+8. [Preprocessing Data](#preprocessing-data)
+9. [Statistical Analyser](#statistical-analyser)
+10. [Plotting](#plotting)
+11. [Monte Carlo Simulation](#monte-carlo-simulation)
+12. [Machine Learning Models](#machine-learning-mdels)
 
 # Chapter 1 - Introduction
 
@@ -1033,7 +1045,7 @@ This function performs basic statistics calculations (count, mean value, standar
 
 ### Returns
 
-- `**results_df` (DataFrame): A pandas DataFrame containing the results of the basic statistics and the t-test for each specified column. The DataFrame includes the following columns:
+- **`results_df`** (DataFrame): A pandas DataFrame containing the results of the basic statistics and the t-test for each specified column. The DataFrame includes the following columns:
     - **`'Column'`**: The name of the column for which the basic statistics calculations and t-test were performed.
     - **`'Count 1'`**: The number of column elements of first input DataFrame.
     - **`'Mean 1'`**: The mean value of column elements of first input DataFrame.
