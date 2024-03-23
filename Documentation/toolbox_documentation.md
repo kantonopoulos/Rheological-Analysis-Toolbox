@@ -20,7 +20,7 @@ Last Edited By: Konstantinos Antonopoulos
 9. [Statistical Analyser](#chapter-9---statistical-analyser)
 10. [Plotting](#chapter-10---plotting)
 11. [Monte Carlo Simulation](#chapter-11---monte-carlo-simulation)
-12. [Machine Learning Models](#chapter-12---machine-learning-mdels)
+12. [Machine Learning Models](#chapter-12---machine-learning-models)
 
 # Chapter 1 - Introduction
 
