@@ -9,7 +9,7 @@ Last Edited By: Konstantinos Antonopoulos
 > 
 
 # Contents
-1. [Introduction](#chapter-1-introduction)
+1. [Introduction](#chapter-1---introduction)
 2. [Installation](#installation)
 3. [Database Creator](#database-creator)
 4. [New Sample Profile Creator](#new-sample-profile-creator)
